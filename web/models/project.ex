@@ -12,7 +12,7 @@ defmodule JdAdmin.Project do
   end
 
   @required_fields ~w(title slug excerpt body)
-  @optional_fields ~w()
+  @optional_fields ~w(project_url)
 
   def changeset(model, params \\ :empty) do
     model
