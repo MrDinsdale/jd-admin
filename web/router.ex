@@ -16,10 +16,8 @@ defmodule JdAdmin.Router do
   scope "/", JdAdmin do
     pipe_through :browser
 
-    resources "/sessions", SessionController, only: [:new, :create, :delete]
     resources "/posts", PostController
     resources "/projects", ProjectController
-    resources "/users", UserController
 
     get "/", PageController, :index
   end

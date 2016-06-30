@@ -5,6 +5,7 @@
     <ul>
       <li>
         <%= link "Posts", to: "/posts" %>
+        <%= link "Projects", to: "/projects" %>
       </li>
     </ul>
   </div>
