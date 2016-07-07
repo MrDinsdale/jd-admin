@@ -10,12 +10,54 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
+alias JdAdmin.Repo
 alias JdAdmin.Post
 alias JdAdmin.Project
 
-Repo.insert! %Post{
-  title: "This is a test post",
-  slug: "test-post",
-  excerpt: "Florence fennel radicchio elephant",
+%Post{
+  title: "Test post 1",
+  slug: "test-post-1",
+  featured_image: "2fx2tip.png",
+  excerpt: "This is an excerpt",
   body: "Florence fennel hamburg parsley - ceylon spinach sweet pepper florence fennel scorzonera beet greens rutabaga common bean. Winter melon, bell pepper kale mustard! Guar water chestnut swiss chard, taro lamb's lettuce; sierra leone bologi carrot; kuka cauliflower sweet pepper mizuna greens hamburg parsley. Pea sprouts horseradish green bean lagos bologi. Plectranthus garbanzo velvet bean yacón summer purslane chard corn salad garden rocket - celery fava bean. Florence fennel radicchio elephant garlic mizuna greens turnip greens spring onion elephant foot yam. Black-eyed pea swiss chard fat hen kurrat tepary bean soybean - swiss chard prairie turnip drumstick. Ahipa, prussian asparagus courgette. Pumpkin ceylon spinach kale komatsuna mooli horse gram lizard's tail, kohlrabi water chestnut lentil celery garden rocket. Prairie turnip melokhia kuka bitterleaf horse gram kohlrabi. Orache komatsuna, greater plantain peanut sweet potato or kumara chickweed shallot horseradish radish nopal."
-}
+} |> Repo.insert!
+
+%Post{
+  title: "Test post 2",
+  slug: "test-post-2",
+  featured_image: "2fx2tip.png",
+  excerpt: "This is another excerpt",
+  body: "Florence fennel hamburg parsley - ceylon spinach sweet pepper florence fennel scorzonera beet greens rutabaga common bean. Winter melon, bell pepper kale mustard! Guar water chestnut swiss chard, taro lamb's lettuce; sierra leone bologi carrot; kuka cauliflower sweet pepper mizuna greens hamburg parsley. Pea sprouts horseradish green bean lagos bologi. Plectranthus garbanzo velvet bean yacón summer purslane chard corn salad garden rocket - celery fava bean. Florence fennel radicchio elephant garlic mizuna greens turnip greens spring onion elephant foot yam. Black-eyed pea swiss chard fat hen kurrat tepary bean soybean - swiss chard prairie turnip drumstick. Ahipa, prussian asparagus courgette. Pumpkin ceylon spinach kale komatsuna mooli horse gram lizard's tail, kohlrabi water chestnut lentil celery garden rocket. Prairie turnip melokhia kuka bitterleaf horse gram kohlrabi. Orache komatsuna, greater plantain peanut sweet potato or kumara chickweed shallot horseradish radish nopal."
+} |> Repo.insert!
+
+%Post{
+  title: "Test post 3",
+  slug: "test-post-3",
+  featured_image: "2fx2tip.png",
+  excerpt: "More excerpt here",
+  body: "Florence fennel hamburg parsley - ceylon spinach sweet pepper florence fennel scorzonera beet greens rutabaga common bean. Winter melon, bell pepper kale mustard! Guar water chestnut swiss chard, taro lamb's lettuce; sierra leone bologi carrot; kuka cauliflower sweet pepper mizuna greens hamburg parsley. Pea sprouts horseradish green bean lagos bologi. Plectranthus garbanzo velvet bean yacón summer purslane chard corn salad garden rocket - celery fava bean. Florence fennel radicchio elephant garlic mizuna greens turnip greens spring onion elephant foot yam. Black-eyed pea swiss chard fat hen kurrat tepary bean soybean - swiss chard prairie turnip drumstick. Ahipa, prussian asparagus courgette. Pumpkin ceylon spinach kale komatsuna mooli horse gram lizard's tail, kohlrabi water chestnut lentil celery garden rocket. Prairie turnip melokhia kuka bitterleaf horse gram kohlrabi. Orache komatsuna, greater plantain peanut sweet potato or kumara chickweed shallot horseradish radish nopal."
+} |> Repo.insert!
+
+%Post{
+  title: "Test post 4",
+  slug: "test-post-4",
+  featured_image: "2fx2tip.png",
+  excerpt: "This is an excerpt",
+  body: "Florence fennel hamburg parsley - ceylon spinach sweet pepper florence fennel scorzonera beet greens rutabaga common bean. Winter melon, bell pepper kale mustard! Guar water chestnut swiss chard, taro lamb's lettuce; sierra leone bologi carrot; kuka cauliflower sweet pepper mizuna greens hamburg parsley. Pea sprouts horseradish green bean lagos bologi. Plectranthus garbanzo velvet bean yacón summer purslane chard corn salad garden rocket - celery fava bean. Florence fennel radicchio elephant garlic mizuna greens turnip greens spring onion elephant foot yam. Black-eyed pea swiss chard fat hen kurrat tepary bean soybean - swiss chard prairie turnip drumstick. Ahipa, prussian asparagus courgette. Pumpkin ceylon spinach kale komatsuna mooli horse gram lizard's tail, kohlrabi water chestnut lentil celery garden rocket. Prairie turnip melokhia kuka bitterleaf horse gram kohlrabi. Orache komatsuna, greater plantain peanut sweet potato or kumara chickweed shallot horseradish radish nopal."
+} |> Repo.insert!
+
+%Post{
+  title: "Test post 5",
+  slug: "test-post-5",
+  featured_image: "2fx2tip.png",
+  excerpt: "This is another excerpt",
+  body: "Florence fennel hamburg parsley - ceylon spinach sweet pepper florence fennel scorzonera beet greens rutabaga common bean. Winter melon, bell pepper kale mustard! Guar water chestnut swiss chard, taro lamb's lettuce; sierra leone bologi carrot; kuka cauliflower sweet pepper mizuna greens hamburg parsley. Pea sprouts horseradish green bean lagos bologi. Plectranthus garbanzo velvet bean yacón summer purslane chard corn salad garden rocket - celery fava bean. Florence fennel radicchio elephant garlic mizuna greens turnip greens spring onion elephant foot yam. Black-eyed pea swiss chard fat hen kurrat tepary bean soybean - swiss chard prairie turnip drumstick. Ahipa, prussian asparagus courgette. Pumpkin ceylon spinach kale komatsuna mooli horse gram lizard's tail, kohlrabi water chestnut lentil celery garden rocket. Prairie turnip melokhia kuka bitterleaf horse gram kohlrabi. Orache komatsuna, greater plantain peanut sweet potato or kumara chickweed shallot horseradish radish nopal."
+} |> Repo.insert!
+
+%Post{
+  title: "Test post 6",
+  slug: "test-post-6",
+  featured_image: "2fx2tip.png",
+  excerpt: "More excerpt here",
+  body: "Florence fennel hamburg parsley - ceylon spinach sweet pepper florence fennel scorzonera beet greens rutabaga common bean. Winter melon, bell pepper kale mustard! Guar water chestnut swiss chard, taro lamb's lettuce; sierra leone bologi carrot; kuka cauliflower sweet pepper mizuna greens hamburg parsley. Pea sprouts horseradish green bean lagos bologi. Plectranthus garbanzo velvet bean yacón summer purslane chard corn salad garden rocket - celery fava bean. Florence fennel radicchio elephant garlic mizuna greens turnip greens spring onion elephant foot yam. Black-eyed pea swiss chard fat hen kurrat tepary bean soybean - swiss chard prairie turnip drumstick. Ahipa, prussian asparagus courgette. Pumpkin ceylon spinach kale komatsuna mooli horse gram lizard's tail, kohlrabi water chestnut lentil celery garden rocket. Prairie turnip melokhia kuka bitterleaf horse gram kohlrabi. Orache komatsuna, greater plantain peanut sweet potato or kumara chickweed shallot horseradish radish nopal."
+} |> Repo.insert!
