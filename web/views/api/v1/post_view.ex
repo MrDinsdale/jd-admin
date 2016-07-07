@@ -10,9 +10,10 @@ defmodule JdAdmin.Api.PostView do
       %{
         "type": "post",
         "id": post.id,
+        "slug": post.slug,
         "attributes": %{
           "title": post.title,
-          "slug": post.slug,
+          "featured_image": post.featured_image,
           "excerpt": post.excerpt,
           "body": post.body,
           "created_at": post.inserted_at,
@@ -26,9 +27,10 @@ defmodule JdAdmin.Api.PostView do
      %{
       "type": "post",
       "id": post.id,
+      "slug": post.slug,
       "attributes": %{
         "title": post.title,
-        "slug": post.slug,
+        "featured_image": post.featured_image,
         "excerpt": post.excerpt,
         "body": post.body,
         "created_at": post.inserted_at,

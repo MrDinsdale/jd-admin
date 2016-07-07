@@ -1,0 +1,11 @@
+.alert {
+  font-weight: 800;
+
+  &--info {
+    color: $blue;
+  }
+
+  &--danger {
+    color: $red;
+  }
+}

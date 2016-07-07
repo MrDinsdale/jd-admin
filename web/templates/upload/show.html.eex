@@ -1,0 +1,24 @@
+<div class="upload-show__wrapper">
+  <img src="https://s3-eu-west-1.amazonaws.com/joedinsdale-assets/uploads/images/thumb/<%= @upload.file.file_name %>" />
+
+  <div class="upload-show__content">
+    <h2 class="upload-show__title"><%= @upload.name %></h2>
+
+    <p><%= @upload.alt %></p>
+
+    <ul class="upload-show__meta">
+      <li>
+        <strong>Filename: </strong><%= @upload.file.file_name %>
+      </li>
+      <li>
+        <strong>Thumbnail: </strong>https://s3-eu-west-1.amazonaws.com/joedinsdale-assets/uploads/images/thumb/<%= @upload.file.file_name %>
+      </li>
+      <li>
+        <strong>Original: </strong>https://s3-eu-west-1.amazonaws.com/joedinsdale-assets/uploads/images/original/<%= @upload.file.file_name %>
+      </li>
+    </ul>
+
+    <%= link "Edit", to: upload_path(@conn, :edit, @upload), class: "ui-button ui-button--edit" %>
+  </div>
+</div>
+<%= link "Back", to: upload_path(@conn, :index), class: "ui-button ui-button--back" %>

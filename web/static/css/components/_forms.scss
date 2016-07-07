@@ -1,3 +1,14 @@
+.form-group {
+  position: relative;
+
+  .help-block {
+    color: $red;
+    right: 1em;
+    position: absolute;
+    top: 0;
+  }
+}
+
 .c-form {
   max-width: 50em;
 
@@ -10,12 +21,16 @@
 }
 
 .c-form__label {
+  display: block;
   font-weight: 400;
   padding: 0 1em .5em;
 }
 
 .c-form__input {
+  background: $white url('/images/ui/bg-diag-grey.png') top left;
+  background-size: 6px;
   border: 0;
+  box-shadow: 0 0 .5em rgba($grey-dark, 0.1);
   margin-bottom: 1.5em;
   padding: .5em 1em;
   width: 100%;

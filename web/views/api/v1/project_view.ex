@@ -10,9 +10,10 @@ defmodule JdAdmin.Api.ProjectView do
       %{
         "type": "project",
         "id": project.id,
+        "slug": project.slug,
         "attributes": %{
           "title": project.title,
-          "slug": project.slug,
+          "featured_image": project.featured_image,
           "excerpt": project.excerpt,
           "body": project.body,
           'project_url': project.project_url,
@@ -27,9 +28,10 @@ defmodule JdAdmin.Api.ProjectView do
     %{
       "type": "project",
       "id": project.id,
+      "slug": project.slug,
       "attributes": %{
         "title": project.title,
-        "slug": project.slug,
+        "featured_image": project.featured_image,
         "excerpt": project.excerpt,
         "body": project.body,
         'project_url': project.project_url,

@@ -19,6 +19,12 @@
     </div>
 
     <div class="form-group">
+      <%= label f, :featured_image, class: "c-form__label" %>
+      <%= text_input f, :featured_image, class: "c-form__input" %>
+      <%= error_tag f, :featured_image %>
+    </div>
+
+    <div class="form-group">
       <%= label f, :excerpt, class: "c-form__label" %>
       <%= text_input f, :excerpt, class: "c-form__input" %>
       <%= error_tag f, :excerpt %>

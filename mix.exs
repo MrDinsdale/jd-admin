@@ -24,7 +24,6 @@ defmodule JdAdmin.Mixfile do
         :gettext,
         :phoenix_ecto,
         :postgrex,
-        :comeonin,
         :ex_aws,
         :httpoison
       ]
@@ -43,7 +42,6 @@ defmodule JdAdmin.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.9"},
       {:cowboy, "~> 1.0"},
-      {:comeonin, "~> 2.1"},
       {:arc, "~> 0.5.2"},
       {:arc_ecto, "~> 0.3.2"},
       {:ex_aws, "~> 0.4.10"},

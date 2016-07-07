@@ -18,6 +18,7 @@ defmodule JdAdmin.Router do
 
     resources "/posts", PostController
     resources "/projects", ProjectController
+    resources "/uploads", UploadController
 
     get "/", PageController, :index
   end

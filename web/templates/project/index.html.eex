@@ -1,6 +1,13 @@
 <div class="cactus__g">
-  <div class="cactus__u--1">
+  <div class="cactus__u--1-2 cactus__u--s-1">
     <h1>Listing projects</h1>
+  </div>
+  <div class="cactus__u--1-2 cactus__u--s-1">
+    <ul class="actions-list actions-list--main">
+      <li class="actions-list__item">
+        <%= link "New project", to: project_path(@conn, :new), class: "ui-button ui-button--new" %>
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -27,12 +34,5 @@
         </div>
       </div>
     <% end %>
-    <div class="cactus__u--1">
-      <ul class="actions-list actions-list--main">
-        <li class="actions-list__item">
-          <%= link "New project", to: project_path(@conn, :new), class: "ui-button ui-button--new" %>
-        </li>
-      </ul>
-    </div>
   </div>
 </div>

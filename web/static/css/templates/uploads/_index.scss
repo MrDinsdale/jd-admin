@@ -1,0 +1,22 @@
+.upload-list {
+  margin: 0;
+  padding: 0;
+
+  .upload-item {
+    background-color: $white;
+    list-style: none;
+    margin-bottom: 2em;
+
+    &__inner {
+      padding: .5em 2em 2.5em;
+    }
+
+    &__meta {
+      color: $grey-mid;
+      font-style: italic;
+      list-style: none;
+      // margin: 0;
+      padding: 0;
+    }
+  }
+}

@@ -47,7 +47,7 @@ defmodule JdAdmin.ProjectController do
       {:ok, project} ->
         conn
         |> put_flash(:info, "Project updated successfully.")
-        |> redirect(to: project_path(conn, :show, project))
+        |> redirect(to: project_path(conn, :index))
       {:error, changeset} ->
         render(conn, "edit.html", project: project, changeset: changeset)
     end

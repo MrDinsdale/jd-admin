@@ -4,6 +4,7 @@ defmodule JdAdmin.Project do
   schema "projects" do
     field :title, :string
     field :slug, :string
+    field :featured_image, :string
     field :excerpt, :string
     field :project_url, :string
     field :body, :string
@@ -11,7 +12,7 @@ defmodule JdAdmin.Project do
     timestamps
   end
 
-  @required_fields ~w(title slug excerpt body)
+  @required_fields ~w(title slug excerpt body featured_image)
   @optional_fields ~w(project_url)
 
   def changeset(model, params \\ :empty) do

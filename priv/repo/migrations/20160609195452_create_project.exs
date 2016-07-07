@@ -5,8 +5,10 @@ defmodule JdAdmin.Repo.Migrations.CreateProject do
     create table(:projects) do
       add :title, :string
       add :slug, :string
+      add :featured_image, :string
       add :excerpt, :string
       add :body, :text
+      add :project_url, :string
 
       timestamps
     end

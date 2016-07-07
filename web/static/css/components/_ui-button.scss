@@ -2,13 +2,20 @@
   background: $orange;
   border: 0;
   color: $white;
+  cursor: pointer;
   display: inline-block;
   padding: .5em 1em;
 
   &--new,
+  &--save,
+  &--back {
+    font-size: 1.25em;
+    margin: 0 0 .5em;
+  }
+
+  &--new,
   &--save {
     background-color: $green;
-    font-size: 1.25em;
   }
 
   &--show {

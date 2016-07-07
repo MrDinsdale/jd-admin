@@ -23,15 +23,26 @@
           <li class="nav-list__item">
             <%= link "Projects", to: "/projects", class: "nav-list__link" %>
           </li>
+          <li class="nav-list__item">
+            <%= link "Uploads", to: "/uploads", class: "nav-list__link" %>
+          </li>
         </ul>
       </nav>
 
     </header>
 
-    <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-    <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
     <main class="site-content" role="main">
+      <div class="cactus__g">
+        <div class="cactus__u--1">
+          <div class="alert alert--info" role="alert">
+            <%= get_flash(@conn, :info) %>
+          </div>
+          <div class="alert alert--danger" role="alert">
+            <%= get_flash(@conn, :error) %>
+          </div>
+        </div>
+      </div>
+
       <%= render @view_module, @view_template, assigns %>
     </main>
 

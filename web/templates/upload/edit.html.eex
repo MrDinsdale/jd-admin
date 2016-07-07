@@ -1,0 +1,11 @@
+<div class="upload-show__wrapper">
+  <img src="https://s3-eu-west-1.amazonaws.com/joedinsdale-assets/uploads/images/thumb/<%= @upload.file.file_name %>" />
+
+  <div class="upload-show__content">
+    <h2 class="upload-show__title">Edit <%= @upload.name %></h2>
+
+    <%= render "form.html", changeset: @changeset,
+                        action: upload_path(@conn, :update, @upload) %>
+  </div>
+</div>
+<%= link "Back", to: upload_path(@conn, :index), class: "ui-button ui-button--back" %>
