@@ -15,9 +15,3 @@ defmodule JdAdmin.Api.PostController do
     render(conn, "show.json", data: post)
   end
 end
-
-defmodule PostSerializer do
-  use JaSerializer
-
-  def id(model, _conn), do: model.slug
-end
