@@ -16,7 +16,7 @@ defmodule JdAdmin.File do
   end
 
   def storage_dir(version, {_, image}) do
-    "uploads/images/#{version}"
+    "images/#{version}"
   end
 
   def filename(_version, {file, _}) do

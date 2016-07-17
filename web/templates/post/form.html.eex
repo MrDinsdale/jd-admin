@@ -35,6 +35,18 @@
       <%= textarea f, :body, class: "c-form__input c-form__input--textarea" %>
       <%= error_tag f, :body %>
     </div>
+
+    <div class="form-group">
+      <%= label f, :related_first, class: "c-form__label" %>
+      <%= text_input f, :related_first, class: "c-form__input" %>
+      <%= error_tag f, :related_first %>
+    </div>
+
+    <div class="form-group">
+      <%= label f, :related_second, class: "c-form__label" %>
+      <%= text_input f, :related_second, class: "c-form__input" %>
+      <%= error_tag f, :related_second %>
+    </div>
   </div>
 
   <div class="form-group">

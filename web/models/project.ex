@@ -1,9 +1,11 @@
 defmodule JdAdmin.Project do
   use JdAdmin.Web, :model
 
+
+  @primary_key {:slug, :string, []}
+  @derive {Phoenix.Param, key: :slug}
   schema "projects" do
     field :title, :string
-    field :slug, :string
     field :featured_image, :string
     field :excerpt, :string
     field :project_url, :string

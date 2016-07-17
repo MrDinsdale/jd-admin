@@ -22,7 +22,6 @@ defmodule JdAdmin.Api.ProjectView do
   def render("project.json", %{project: project}) do
     %{
       "type": "project",
-      "id": project.id,
       "slug": project.slug,
       "attributes": %{
         "title": project.title,

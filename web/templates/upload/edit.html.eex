@@ -1,5 +1,5 @@
 <div class="upload-show__wrapper">
-  <img src="https://s3-eu-west-1.amazonaws.com/joedinsdale-assets/uploads/images/thumb/<%= @upload.file.file_name %>" />
+  <img src="https://s3-eu-west-1.amazonaws.com/joedinsdale-assets-dev/images/thumb/<%= @upload.file.file_name %>" />
 
   <div class="upload-show__content">
     <h2 class="upload-show__title">Edit <%= @upload.name %></h2>

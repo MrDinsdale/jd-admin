@@ -1,5 +1,5 @@
 <div class="upload-show__wrapper">
-  <img src="https://s3-eu-west-1.amazonaws.com/joedinsdale-assets/uploads/images/thumb/<%= @upload.file.file_name %>" />
+  <img src="https://s3-eu-west-1.amazonaws.com/joedinsdale-assets-dev/images/thumb/<%= @upload.file.file_name %>" />
 
   <div class="upload-show__content">
     <h2 class="upload-show__title"><%= @upload.name %></h2>
@@ -11,10 +11,10 @@
         <strong>Filename: </strong><%= @upload.file.file_name %>
       </li>
       <li>
-        <strong>Thumbnail: </strong>https://s3-eu-west-1.amazonaws.com/joedinsdale-assets/uploads/images/thumb/<%= @upload.file.file_name %>
+        <strong>Thumbnail: </strong>https://s3-eu-west-1.amazonaws.com/joedinsdale-assets-dev/images/thumb/<%= @upload.file.file_name %>
       </li>
       <li>
-        <strong>Original: </strong>https://s3-eu-west-1.amazonaws.com/joedinsdale-assets/uploads/images/original/<%= @upload.file.file_name %>
+        <strong>Original: </strong>https://s3-eu-west-1.amazonaws.com/joedinsdale-assets-dev/images/original/<%= @upload.file.file_name %>
       </li>
     </ul>
 

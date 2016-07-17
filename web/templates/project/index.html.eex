@@ -14,23 +14,27 @@
 <div class="project-list">
   <div class="cactus__g">
     <%= for project <- @projects do %>
-      <div class="cactus__u--1-2 cactus__u--m-1">
+      <div class="cactus__u--1-3 cactus__u--m-1">
         <div class="project-list__item">
-          <h2><%= project.title %></h2>
-          <p><%= project.slug %></p>
-          <p><%= project.excerpt %></p>
+          <div class="post-list__thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/joedinsdale-assets-dev/images/thumb/<%= project.featured_image %>)"></div>
 
-          <ul class="actions-list">
-            <li class="actions-list__item">
-              <%= link "Show", to: "http://localhost:4200/projects/#{project.slug}", class: "ui-button ui-button--show", target: "_blank" %>
-            </li>
-            <li class="actions-list__item">
-              <%= link "Edit", to: project_path(@conn, :edit, project), class: "ui-button ui-button--edit" %>
-            </li>
-            <li class="actions-list__item">
-              <%= link "Delete", to: project_path(@conn, :delete, project), method: :delete, data: [confirm: "Are you sure?"], class: "ui-button ui-button--delete" %>
-            </li>
-          </ul>
+          <div class="post-list__inner">
+            <h2><%= project.title %></h2>
+            <p><%= project.slug %></p>
+            <p><%= project.excerpt %></p>
+
+            <ul class="actions-list">
+              <li class="actions-list__item">
+                <%= link "Show", to: "http://localhost:4200/projects/#{project.slug}", class: "ui-button ui-button--show", target: "_blank" %>
+              </li>
+              <li class="actions-list__item">
+                <%= link "Edit", to: project_path(@conn, :edit, project), class: "ui-button ui-button--edit" %>
+              </li>
+              <li class="actions-list__item">
+                <%= link "Delete", to: project_path(@conn, :delete, project), method: :delete, data: [confirm: "Are you sure?"], class: "ui-button ui-button--delete" %>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     <% end %>

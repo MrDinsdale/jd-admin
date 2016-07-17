@@ -26,7 +26,7 @@ config :phoenix, :generators,
   binary_id: false
 
 config :arc,
-  bucket: "joedinsdale-assets"
+  bucket: System.get_env("AWS_BUCKET")
 
 config :ex_aws,
   access_key_id: System.get_env("AWS_ACCESS_KEY"),

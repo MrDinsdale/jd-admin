@@ -22,7 +22,6 @@ defmodule JdAdmin.Api.PostView do
   def render("post.json", %{post: post}) do
      %{
       "type": "post",
-      "id": post.id,
       "slug": post.slug,
       "attributes": %{
         "title": post.title,
@@ -30,7 +29,11 @@ defmodule JdAdmin.Api.PostView do
         "excerpt": post.excerpt,
         "body": post.body,
         "created_at": post.inserted_at,
-        "updated_at": post.updated_at
+        "updated_at": post.updated_at,
+        "related": %{
+          "first": post.related_first,
+          "second": post.related_second,
+        }
       }
     }
   end
