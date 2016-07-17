@@ -1,15 +1,11 @@
 use Mix.Config
 
-# We don't run a server during test. If one is required,
-# you can enable the server option below.
+config :logger, level: :warn
+
 config :jd_admin, JdAdmin.Endpoint,
   http: [port: 4001],
   server: false
 
-# Print only warnings and errors during test
-config :logger, level: :warn
-
-# Configure your database
 config :jd_admin, JdAdmin.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
@@ -17,6 +13,3 @@ config :jd_admin, JdAdmin.Repo,
   database: "jd_admin_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
-
-# Configure ComeOnIn
-config :comeonin, bcrypt_log_rounds: 4
