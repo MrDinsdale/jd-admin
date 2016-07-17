@@ -16,7 +16,7 @@
     <%= for post <- @posts do %>
       <div class="cactus__u--1-3 cactus__u--m-1">
         <div class="post-list__item">
-          <div class="post-list__thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/joedinsdale-assets-dev/images/thumb/<%= post.featured_image %>)"></div>
+          <div class="post-list__thumb" style='background-image: url(https://s3-eu-west-1.amazonaws.com/<%= System.get_env("AWS_BUCKET") %>/images/thumb/<%= post.featured_image %>)'></div>
           <div class="post-list__inner">
             <h2><%= post.title %></h2>
             <p><%= post.slug %></p>
@@ -24,7 +24,7 @@
 
             <ul class="actions-list">
               <li class="actions-list__item">
-                <%= link "Show", to: "http://localhost:4200/posts/#{post.slug}", class: "ui-button ui-button--show", target: "_blank" %>
+                <%= link "Show", to: "#{System.get_env("FRONTEND_ROOT")}/posts/#{post.slug}", class: "ui-button ui-button--show", target: "_blank" %>
               </li>
               <li class="actions-list__item">
                 <%= link "Edit", to: post_path(@conn, :edit, post), class: "ui-button ui-button--edit" %>
