@@ -17,14 +17,20 @@
 
       <nav class="site-navigation" role="navigation">
         <ul class="nav-list">
-          <li class="nav-list__item">
-            <%= link "Posts", to: "/posts", class: "nav-list__link" %>
+          <li class="nav-list__item nav-list__item--posts">
+            <%= link to: "/posts", class: "nav-list__link" do %>
+              <img src="/images/ui/icon-post.png">
+            <% end %>
           </li>
-          <li class="nav-list__item">
-            <%= link "Projects", to: "/projects", class: "nav-list__link" %>
+          <li class="nav-list__item nav-list__item--projects">
+            <%= link to: "/projects", class: "nav-list__link" do %>
+              <img src="/images/ui/icon-work.png">
+            <% end %>
           </li>
-          <li class="nav-list__item">
-            <%= link "Uploads", to: "/uploads", class: "nav-list__link" %>
+          <li class="nav-list__item nav-list__item--uploads">
+            <%= link to: "/uploads", class: "nav-list__link" do %>
+              <img src="/images/ui/icon-upload.png">
+            <% end %>
           </li>
         </ul>
       </nav>
