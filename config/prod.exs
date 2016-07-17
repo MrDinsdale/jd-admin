@@ -1,5 +1,7 @@
 use Mix.Config
 
+config :logger, level: :info
+
 config :jd_admin, JdAdmin.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "joedinsdale-admin.herokuapp.com", port: 443],
@@ -7,13 +9,8 @@ config :jd_admin, JdAdmin.Endpoint,
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
-config :logger, level: :info
-
 config :jd_admin, JdAdmin.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL"),
-  username: System.get_env("DATABASE_USERNAME"),
-  password: System.get_env("DATABASE_PASSWORD"),
-  database: System.get_env("DATABASE_DATABASE"),
-  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+  url: {:system, "DATABASE_URL"},
+  pool_size: 10,
   ssl: true

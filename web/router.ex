@@ -7,6 +7,7 @@ defmodule JdAdmin.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug BasicAuth, realm: "Admin Area", username: "admin", password: System.get_env("BASIC_AUTH_PASSWORD")
   end
 
   pipeline :api do

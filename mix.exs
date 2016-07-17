@@ -47,7 +47,8 @@ defmodule JdAdmin.Mixfile do
       {:ex_aws, "~> 0.4.10"},
       {:httpoison, "~> 0.7"},
       {:poison, "~> 1.2"},
-      {:cors_plug, "~> 1.1"}
+      {:cors_plug, "~> 1.1"},
+      {:basic_auth, "~> 1.0.0"}
     ]
   end
 
