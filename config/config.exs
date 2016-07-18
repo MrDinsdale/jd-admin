@@ -19,8 +19,6 @@ config :plug, :mimes, %{
   "application/vnd.api+json" => ["json-api"]
 }
 
-import_config "#{Mix.env}.exs"
-
 config :phoenix, :generators,
   migration: true,
   binary_id: false
@@ -38,3 +36,5 @@ config :basic_auth, [
   username: System.get_env("BASIC_AUTH_USER"),
   password: System.get_env("BASIC_AUTH_PASSWORD")
 ]
+
+import_config "#{Mix.env}.exs"

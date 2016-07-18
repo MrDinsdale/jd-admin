@@ -2,7 +2,7 @@ use Mix.Config
 
 config :logger, level: :info
 
-config :jd_admin, :basic_auth, [
+config :basic_auth, [
   realm: "Admin Area",
   username: "admin",
   password: System.get_env("BASIC_AUTH_PASSWORD")
