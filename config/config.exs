@@ -34,7 +34,7 @@ config :ex_aws,
   region: "eu-west-1"
 
 config :jd_admin, :basic_auth, [
-  realm: "Admin Area",
+  realm: System.get_env("BASIC_AUTH_REALM"),
   username: System.get_env("BASIC_AUTH_USER"),
   password: System.get_env("BASIC_AUTH_PASSWORD")
 ]
