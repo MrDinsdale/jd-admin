@@ -7,7 +7,7 @@ defmodule JdAdmin.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug BasicAuth, Application.get_env(:jd_admin, :basic_auth)
+    plug BasicAuth, use_config: :basic_auth
   end
 
   pipeline :api do
