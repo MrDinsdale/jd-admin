@@ -27,9 +27,3 @@ config :jd_admin, JdAdmin.Repo,
   database: "jd_admin_dev",
   hostname: "localhost",
   pool_size: 10
-
-config :jd_admin, :basic_auth, [
-  realm: "Admin Area",
-  username: System.get_env("BASIC_AUTH_USER"),
-  password: System.get_env("BASIC_AUTH_PASSWORD")
-]

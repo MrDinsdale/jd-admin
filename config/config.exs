@@ -32,3 +32,9 @@ config :ex_aws,
   access_key_id: System.get_env("AWS_ACCESS_KEY"),
   secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
   region: "eu-west-1"
+
+config :jd_admin, :basic_auth, [
+  realm: "Admin Area",
+  username: System.get_env("BASIC_AUTH_USER"),
+  password: System.get_env("BASIC_AUTH_PASSWORD")
+]

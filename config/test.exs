@@ -13,9 +13,3 @@ config :jd_admin, JdAdmin.Repo,
   database: "jd_admin_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
-
-config :jd_admin, :basic_auth, [
-  realm: "Admin Area",
-  username: "admin",
-  password: "admin"
-]
