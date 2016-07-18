@@ -6,6 +6,12 @@ config :jd_admin, JdAdmin.Endpoint,
   http: [port: 4001],
   server: false
 
+config :jd_admin, :basic_auth, [
+  realm: "Admin Area",
+  username: "admin",
+  password: ""
+]
+
 config :jd_admin, JdAdmin.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",

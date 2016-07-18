@@ -2,6 +2,12 @@ use Mix.Config
 
 config :logger, level: :info
 
+config :jd_admin, :basic_auth, [
+  realm: "Admin Area",
+  username: "admin",
+  password: System.get_env("BASIC_AUTH_PASSWORD")
+]
+
 config :jd_admin, JdAdmin.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "joedinsdale-admin.herokuapp.com", port: 443],

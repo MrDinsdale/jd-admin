@@ -3,6 +3,12 @@ use Mix.Config
 config :phoenix, :stacktrace_depth, 20
 config :logger, :console, format: "[$level] $message\n"
 
+config :jd_admin, :basic_auth, [
+  realm: "Admin Area",
+  username: "admin",
+  password: ""
+]
+
 config :jd_admin, JdAdmin.Endpoint,
   http: [port: 4000],
   debug_errors: true,

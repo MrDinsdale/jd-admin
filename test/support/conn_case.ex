@@ -13,6 +13,9 @@ defmodule JdAdmin.ConnCase do
   of the test unless the test case is marked as async.
   """
 
+  @username Application.get_env(:jd_admin, :basic_auth)[:username]
+  @password Application.get_env(:jd_admin, :basic_auth)[:password]
+
   use ExUnit.CaseTemplate
 
   using do
@@ -37,6 +40,11 @@ defmodule JdAdmin.ConnCase do
       Ecto.Adapters.SQL.restart_test_transaction(JdAdmin.Repo, [])
     end
 
-    {:ok, conn: Phoenix.ConnTest.conn()}
+    header_content = "Basic " <> Base.encode64("#{@username}:#{@password}")
+
+    conn_with_header = Phoenix.ConnTest.conn()
+    |> Plug.Conn.put_req_header("authorization", header_content)
+
+    {:ok, conn: conn_with_header}
   end
 end
