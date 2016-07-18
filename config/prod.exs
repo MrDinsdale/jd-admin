@@ -14,3 +14,9 @@ config :jd_admin, JdAdmin.Repo,
   url: {:system, "DATABASE_URL"},
   pool_size: 10,
   ssl: true
+
+config :jd_admin, :basic_auth, [
+  realm: "Admin Area",
+  username: System.get_env("BASIC_AUTH_USER"),
+  password: System.get_env("BASIC_AUTH_PASSWORD")
+]
