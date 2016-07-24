@@ -26,10 +26,7 @@ defmodule JdAdmin.Post do
   end
 
   def ordered(query) do
-    # query
-    # |> order_by([p], p.published_at)
-    from p in query,
-      order_by: p.published_at
-
+    query
+    |> order_by([p], desc: p.published_at)
   end
 end
