@@ -11,16 +11,25 @@ defmodule JdAdmin.Post do
     field :body, :string
     field :related_first, :string
     field :related_second, :string
+    field :published_at, Ecto.DateTime
 
     timestamps
   end
 
-  @required_fields ~w(title slug excerpt body featured_image)
+  @required_fields ~w(title slug excerpt body featured_image published_at)
   @optional_fields ~w(related_first related_second)
 
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
     |> unique_constraint(:slug)
+  end
+
+  def ordered(query) do
+    # query
+    # |> order_by([p], p.published_at)
+    from p in query,
+      order_by: p.published_at
+
   end
 end

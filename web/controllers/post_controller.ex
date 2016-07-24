@@ -1,12 +1,14 @@
 defmodule JdAdmin.PostController do
   use JdAdmin.Web, :controller
+  import Ecto.Query
 
   alias JdAdmin.Post
 
   plug :scrub_params, "post" when action in [:create, :update]
 
-  def index(conn, _params) do
-    posts = Repo.all(Post)
+
+  def index(conn, params) do
+    posts = Post |> Post.ordered() |> Repo.all()
     render(conn, "index.html", posts: posts)
   end
 

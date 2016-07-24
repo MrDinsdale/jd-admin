@@ -30,6 +30,7 @@ defmodule JdAdmin.Api.PostView do
         "body": post.body,
         "created_at": post.inserted_at,
         "updated_at": post.updated_at,
+        "published_at": post.published_at,
         "related": %{
           "first": post.related_first,
           "second": post.related_second,

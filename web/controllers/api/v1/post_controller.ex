@@ -4,7 +4,8 @@ defmodule JdAdmin.Api.PostController do
   alias JdAdmin.Post
 
   def index(conn, _params) do
-    render(conn, "index.json", posts: Repo.all(Post))
+    posts = Post |> Post.ordered() |> Repo.all()
+    render(conn, "index.json", posts: posts)
   end
 
   def show(conn, %{"id" => id}) do
